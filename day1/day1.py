@@ -15,11 +15,11 @@ for item in output:
       print('is not a number', number)
   arr.append(itemTotal)
 
-# First challenge answer:
+# First challenge answer
 print(max(arr))
 
 arr.sort()
 sum = arr[-1] + arr[-2] +  arr[-3]
-# second challenge answer:
+# second challenge answer
 print(sum)
 
