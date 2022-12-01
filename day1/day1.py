@@ -1,11 +1,10 @@
 import os
 with open(os.getcwd() + '/day1/input.txt') as f:
-  contents = f.read()
+  contents = f.read().split("\n\n")
 
-output = contents.split("\n\n")
 
-arr = []
-for item in output:
+summary = []
+for item in contents:
   itemTotal = 0 
   for number in item.split("\n"):
     if number.isnumeric(): 
@@ -13,13 +12,13 @@ for item in output:
       itemTotal += int(number)
     else: 
       print('is not a number', number)
-  arr.append(itemTotal)
+  summary.append(itemTotal)
 
-# First challenge answer:
-print(max(arr))
+# First challenge answer
+print(max(summary))
 
-arr.sort()
-sum = arr[-1] + arr[-2] +  arr[-3]
-# second challenge answer:
-print(sum)
+summary.sort()
+sumThreeLargestItems = summary[-1] + summary[-2] +  summary[-3]
+# second challenge answer
+print(sumThreeLargestItems)
 
